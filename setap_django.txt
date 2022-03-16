@@ -1,0 +1,22 @@
+touch requirements.txtDjango, psycopg2-binary)
+pip install -r requirements.txt
+django-admin startproject django_project .
+python3 manage.py startapp posts
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'parker',
+        'USER': 'chingiz',
+        'HOST': 'localhost',
+        'PORT': 5432,
+        'PASSWORD': '1',
+
+
+    }
+}
+
+python3 manage.py makemigrations - sozdanie migracii
+
+python3 manage.py migrate
+python3 manage.py createsuperuser
